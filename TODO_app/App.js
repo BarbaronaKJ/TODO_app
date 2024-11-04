@@ -7,7 +7,7 @@ const App = () => {
   const [editingTask, setEditingTask] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Add a new task or edit an existing one
+  // Add new task / edit task
   const handleAddEditTask = () => {
     if (editingTask !== null) {
       setTasks(
@@ -22,13 +22,13 @@ const App = () => {
     setTaskInput('');
   };
 
-  // Edit a task
+  // Edit task
   const handleEditTask = (index) => {
     setTaskInput(tasks[index]);
     setEditingTask(index);
   };
 
-  // Delete a task
+  // Delete task
   const handleDeleteTask = (index) => {
     setTasks(tasks.filter((_, i) => i !== index));
   };
@@ -89,7 +89,6 @@ const App = () => {
   );
 };
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     height: 50,
